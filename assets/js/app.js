@@ -14,21 +14,10 @@
       html: "<p>This mirrors the calculation using PyTorch (floats, column vectors, matrix multiply).</p><pre><code>import torch\n\n# Use floats.  Instead of inputting 2, use 2.0, for example.\n\nX = torch.tensor([\n    [2.0]\n])\n\nw = torch.tensor([\n    [0.5]\n])\n\nb = torch.tensor([\n    [1.0]\n])\n\nYhat = X @ w + b\n</code></pre>"
     },
     {
-      title: "Neuron Model",
-      html: "<p>A neuron computes z = W·x + b and y = σ(z). Here, W are weights, x inputs, b bias, and σ an activation (e.g., ReLU, sigmoid).</p>"
+      title: "Practice: Try Ex. 1 and Ex. 2",
+      html: "<p>Now practice what you’ve learned:</p><ul><li>In the Practice tab, choose <strong>Ex. 1</strong> and compute Yhat = wX + b.</li><li>Then choose <strong>Ex. 2</strong> and do the same.</li></ul><p>Use the <em>Reveal Answer</em> button to check your work.</p>"
     },
-    {
-      title: "Activation Functions",
-      html: "<ul><li>ReLU: max(0, z)</li><li>Sigmoid: 1 / (1 + e^{-z})</li><li>Tanh: (e^{z} - e^{-z}) / (e^{z} + e^{-z})</li></ul>"
-    },
-    {
-      title: "Network Architecture",
-      html: "<p>Feed-forward networks stack layers. Each layer transforms its input into output by applying weights, bias, and activation.</p>"
-    },
-    {
-      title: "Loss & Training",
-      html: "<p>Loss measures error (e.g., MSE, cross-entropy). Training adjusts parameters via gradient descent and backpropagation.</p>"
-    }
+    
   ];
 
   // Named problem sets
