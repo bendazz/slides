@@ -44,6 +44,11 @@ button[disabled] { opacity: 0.5; cursor: not-allowed; }
 .choice.incorrect { border-color: #ef4444; background: #fef2f2; }
 
 .feedback { margin-top: 12px; min-height: 20px; }
+
+/* Problem set picker */
+.set-picker { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.set-picker label { font-weight: 600; color: #0f172a; }
+.set-picker select { padding: 6px 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
 .app-footer { text-align: center; padding: 16px; color: #334155; }
 
 /* Simple NN diagram styling */
