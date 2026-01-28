@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neural Networks: Slides & Practice</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Basic Feed-Forward Neural Networks</h1>
+    <nav class="tabs">
+      <button id="tab-slides" class="tab active" data-view="slides">Slides</button>
+      <button id="tab-practice" class="tab" data-view="practice">Practice</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="view-slides" class="view">
+      <div class="slide">
+        <h2 id="slide-title"></h2>
+        <div id="slide-content" class="slide-content"></div>
+      </div>
+      <div class="controls">
+        <button id="prev-slide" class="secondary" aria-label="Previous slide">&larr; Previous</button>
+        <div id="slide-progress" aria-live="polite"></div>
+        <button id="next-slide" class="primary" aria-label="Next slide">Next &rarr;</button>
+      </div>
+    </section>
+
+    <section id="view-practice" class="view hidden">
+      <div class="problem">
+        <h2 id="problem-title"></h2>
+        <div id="problem-question" class="problem-question"></div>
+        <ul id="problem-choices" class="choices" role="list"></ul>
+        <div class="actions">
+          <button id="submit-answer" class="primary" disabled>Submit</button>
+          <button id="next-problem" class="secondary hidden">Next Problem</button>
+        </div>
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Built for learning — we’ll add more together.</small>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
