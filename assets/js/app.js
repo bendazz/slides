@@ -14,15 +14,15 @@
       html: "<p>This mirrors the calculation using PyTorch (floats, column vectors, matrix multiply).</p><pre><code>import torch\n\n# Use floats.  Instead of inputting 2, use 2.0, for example.\n\nX = torch.tensor([\n    [2.0]\n])\n\nw = torch.tensor([\n    [0.5]\n])\n\nb = torch.tensor([\n    [1.0]\n])\n\nYhat = X @ w + b\n</code></pre>"
     },
     {
-      title: "Practice: Try Ex. 1 and Ex. 2",
-      html: "<p>Now practice what you’ve learned:</p><ul><li>In the Practice tab, choose <strong>Ex. 1</strong> and compute Yhat = wX + b.</li><li>Then choose <strong>Ex. 2</strong> and do the same.</li></ul><p>Use the <em>Reveal Answer</em> button to check your work.</p>"
+      title: "Practice: Try Basics and Two Samples",
+      html: "<p>Now practice what you’ve learned:</p><ul><li>In the Practice tab, choose <strong>Basics</strong> and compute Yhat = wX + b.</li><li>Then choose <strong>Two Samples</strong> and do the same for both inputs.</li></ul><p>Use the <em>Reveal Answer</em> button to check your work.</p>"
     },
     
   ];
 
   // Named problem sets
   const problemSets = {
-    "Basics: Yhat": [
+    "Basics": [
     {
       title: "Ex. 1",
       question: "Given X = 2, w = 0.5, b = 1, compute Yhat = wX + b",
@@ -91,7 +91,7 @@
     }
     ]
     ,
-    "Two Samples: Yhat": [
+    "Two Samples": [
       {
         title: "Ex. 1",
         question: "Given two samples X1 = 2, X2 = 4, with w = 0.5 and b = 1, compute Yhat for each sample (Yhat = wX + b)",
@@ -123,6 +123,11 @@
   // ----- State -----
   let slideIndex = Number(localStorage.getItem("slideIndex") || 0);
   let currentProblemSet = localStorage.getItem("problemSet") || Object.keys(problemSets)[0];
+  const legacySetMap = { "Basics: Yhat": "Basics", "Two Samples: Yhat": "Two Samples" };
+  if (!problemSets[currentProblemSet] && legacySetMap[currentProblemSet]) {
+    currentProblemSet = legacySetMap[currentProblemSet];
+    localStorage.setItem("problemSet", currentProblemSet);
+  }
   let problemIndex = Number(localStorage.getItem("problemIndex") || 0);
   let selectedChoiceIdx = null;
 
